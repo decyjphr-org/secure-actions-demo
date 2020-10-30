@@ -1,12 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
+
 name: CI
+
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the seed branch
 on:
   pull_request:
     branches: [ seed ]
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -15,17 +18,30 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      # Setup Node  
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 10
+      # Lint code base  
+      - name: Lint Code Base
+        uses: github/super-linter@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_HTML: false
+          VALIDATE_CSS: false  
+      # NPM Install  
+      - name: npm install and build webpack
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          npm install
+          npm run build
+      # Upload Artifacts
+      - uses: actions/upload-artifact@master
+        with:
+          name: webpack artifacts
+          path: public/
