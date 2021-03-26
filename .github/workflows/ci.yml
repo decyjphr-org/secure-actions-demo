@@ -45,3 +45,15 @@ jobs:
         with:
           name: webpack artifacts
           path: public/
+  deploy-staging:
+    # The type of runner that the job will run on
+    needs: build
+    runs-on: ubuntu-latest
+    environment: staging
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Download Artifacts
+      - uses: actions/download-artifact@master
+        with:
+          name: webpack artifacts
+          path: public/
