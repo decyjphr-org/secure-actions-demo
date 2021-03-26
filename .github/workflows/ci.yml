@@ -51,5 +51,5 @@ jobs:
         with:
           name: webpack artifacts
           path: public/
-      - run:
-        echo -e "\e[42mRunning in\e[0m \e[42;5mStaging\e[0m"
+      - run: |
+          echo -e "\e[42mRunning in\e[0m \e[42;5mStaging\e[0m"
