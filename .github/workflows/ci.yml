@@ -28,13 +28,6 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: 10
-      # Lint code base  
-      - name: Lint Code Base
-        uses: github/super-linter@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_HTML: false
-          VALIDATE_CSS: false  
       # NPM Install  
       - name: npm install and build webpack
         run: |
