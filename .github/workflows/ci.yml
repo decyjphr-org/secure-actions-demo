@@ -52,3 +52,4 @@ jobs:
           path: public/
       - run: |
           echo -e "\e[32mRunning in \e[0m \e[42;5mStaging\e[0m"
+          echo -e "\e[32mRunning in \e[0m \e[42;5mStaging\e[0m"
