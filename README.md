@@ -1,4 +1,4 @@
-# Reference Repository for Workflow Hardening and Approvals
+# Security Hardening of GitHub Actions Workflows 
 
 ![CI](https://github.com/decyjphr-org/actions-demo/workflows/CI/badge.svg)
 
