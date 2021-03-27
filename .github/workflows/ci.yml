@@ -50,6 +50,6 @@ jobs:
           name: webpack artifacts
           path: public/
       - run: |
-          echo -e "\e[32mRunning in \e[0m \e[42;5m Staging \e[0m"
-          sleep 10
-          echo -e "\e[52mRunning in \e[0m \e[52;5m Done\e[0m"
+          for i in {40..47}; do s="\e[1;"$i"m     \e[0m"; echo $s; done;
+          sleep 60
+          
