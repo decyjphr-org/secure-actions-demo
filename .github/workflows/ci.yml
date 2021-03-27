@@ -39,7 +39,7 @@ jobs:
           path: public/
   deploy-staging:
     # The type of runner that the job will run on
-    needs: build
+    #needs: build
     runs-on: ubuntu-latest
     environment: stagings
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -52,4 +52,4 @@ jobs:
       - run: |
           for i in {40..47}; do s="\033[1;"$i"m  \033[0m\n"; echo -e $s; done;
           echo -e "\e[32mRunning in \e[0m \e[42;5m Staging \e[0m"          
-          
+          for i in {40..47}; do s="\033[1;"$i"m  \033[0m\n"; echo -e "\e[32mRunning in \e[0m \e[${i};5m Staging \e[0m"; done;
