@@ -23,9 +23,8 @@ Various possible options for searching the audit log is explained here at [Revie
 In that location above, you can find information on accessing the Audit Log at https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/reviewing-the-audit-log-for-your-organization#accessing-the-audit-log
 
 For `Workflow` events, you can use the `actions` parameter to filter. Please see the screenshot below:
-| |
-|--|
-|![image](https://user-images.githubusercontent.com/57544838/112735417-2c4f8100-8f22-11eb-8f18-63de02df0c09.png)|
+
+![image](https://user-images.githubusercontent.com/57544838/112735417-2c4f8100-8f22-11eb-8f18-63de02df0c09.png)
 
 
 ### Exporting the Audit Log
