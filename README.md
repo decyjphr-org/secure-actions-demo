@@ -3,17 +3,15 @@
 ![CI](https://github.com/decyjphr-org/actions-demo/workflows/CI/badge.svg)
 
 
-Github Actions can provision infra, deploy apps, create releases, access secrets, etc. Since anyone with write access could create an Action Workflow in a repo, we want to:
+Github Actions can provision infra, deploy apps, create releases, access secrets, etc. Since anyone with write access could create an Action Workflow in a repo, we want to demonstrate:
 
 - Provide teams with Workflow templates of `blessed` workflows
 - Show how workflow approval could be achieved using [environments]()
 - Use CODEOWNERS to prevent unauthorized changes to workflows
 - Control execution-only approved workflows
-- User the AuditLog to audit Workflow runs.
+- Auditing Workflow Run Events.
 
-
-https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access
-
+Most of the examples listed here are based on the documentation for [security-hardening-for-github-actions](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions)
 
 ## Auditing Workflow Run Events
 The Audit Log now includes events associated with GitHub Actions workflow runs. This data provides enterprise customers with a greatly expanded data set for security and compliance audits.<sup>[1](https://github.blog/changelog/2021-02-23-github-actions-workflow-run-events-are-now-included-in-the-audit-log/)</sup>
@@ -24,8 +22,10 @@ Various possible options for searching the audit log is explained here at [Revie
 ### Viewing Workflow events in the UI
 In that location above, you can find information on accessing the Audit Log at https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/reviewing-the-audit-log-for-your-organization#accessing-the-audit-log
 
-For `Workflow`
-![image](https://user-images.githubusercontent.com/57544838/112735417-2c4f8100-8f22-11eb-8f18-63de02df0c09.png)
+For `Workflow` events, you can use the `actions` parameter to filter. Please see the screenshot below:
+| |
+|--|
+|![image](https://user-images.githubusercontent.com/57544838/112735417-2c4f8100-8f22-11eb-8f18-63de02df0c09.png)|
 
 
 ### Exporting the Audit Log
