@@ -3,7 +3,9 @@
 ![CI](https://github.com/decyjphr-org/actions-demo/workflows/CI/badge.svg)
 
 
-Github Actions can provision infra, deploy apps, create releases, access secrets, etc. Since anyone with write access could create an Action Workflow in a repo, we want to demonstrate:
+Github Actions can provision infra, deploy apps, create releases, access secrets, etc. Since anyone with write access could create an Action Workflow in a repo, we want to demonstrate examples of how to harden and secure workflows. Most of the examples listed here are based on the documentation for [security-hardening-for-github-actions](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions) 
+
+Table of Contents
 
 - Provide teams with Workflow templates of `blessed` workflows
 - Show how workflow approval could be achieved using [environments]()
@@ -11,7 +13,7 @@ Github Actions can provision infra, deploy apps, create releases, access secrets
 - Control execution-only approved workflows
 - Auditing Workflow Run Events.
 
-Most of the examples listed here are based on the documentation for [security-hardening-for-github-actions](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions)
+
 
 ## Auditing Workflow Run Events
 The Audit Log now includes events associated with GitHub Actions workflow runs. This data provides enterprise customers with a greatly expanded data set for security and compliance audits.<sup>[1](https://github.blog/changelog/2021-02-23-github-actions-workflow-run-events-are-now-included-in-the-audit-log/)</sup>
