@@ -49,7 +49,8 @@ jobs:
       #  with:
       #    name: webpack artifacts
       #    path: public/
-      - run: |        
+      - run: |   
+          echo
           for i in {40..47}; do s="\033[1;"$i"m  \033[0m\n"; echo -e "\e[32mDreaming in \e[0m \e[${i};5m color \e[0m"; done;
           for i in {0..255} ; do
             printf "\x1b[38;5;${i}m%3d " "${i}"
