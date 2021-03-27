@@ -50,6 +50,6 @@ jobs:
           name: webpack artifacts
           path: public/
       - run: |
-          for i in {40..47}; do s="\e[1;"$i"m     \e[0m"; echo $s; done;
-          sleep 60
+          for i in {40..47}; do s="\e[1;"$i"m     \e[0m"; echo -e $s; done;
+          
           
