@@ -41,7 +41,7 @@ jobs:
     # The type of runner that the job will run on
     needs: build
     runs-on: ubuntu-latest
-    environment: staging
+    environment: stagings
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Download Artifacts
@@ -50,6 +50,6 @@ jobs:
           name: webpack artifacts
           path: public/
       - run: |
-          for i in {40..47}; do s="\033[1;"$i"m\t\t\033[0m\n"; echo -e $s; done;
-          
+          for i in {40..47}; do s="\033[1;"$i"m  \033[0m\n"; echo -e $s; done;
+          echo -e "\e[32mRunning in \e[0m \e[42;5m Staging \e[0m"          
           
