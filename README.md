@@ -33,3 +33,6 @@ In that location above, you can find information on exporting the  Audit Log at 
 
 ### Using Audit Log API
 In that location above, you can find information on using Audit Log API at https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/reviewing-the-audit-log-for-your-organization#using-the-audit-log-api
+For `Workflow` events, you can use the `phrase`  with the `action` parameter to filter. For example, the followinf query `https://api.github.com/organizations/65230155/audit-log?phrase=action:worflows` will produce the result as shown below:
+
+![image](https://user-images.githubusercontent.com/57544838/112736273-de3d7c00-8f27-11eb-9228-e7fff8713d78.png)
