@@ -11,7 +11,13 @@ Table of Contents
 - Show how workflow approval could be achieved using [environments]()
 - Use CODEOWNERS to prevent unauthorized changes to workflows
 - Control execution-only approved workflows
+- Organization or Enterprise level workflows
 - Auditing Workflow Run Events.
+
+
+## Organization or Enterprise level workflows
+
+This is a feature that is in the roadmap but is targeted for a not-yet-defined future date. This would enable you to define a workflow that is run against multiple repositories in an Org or enterprise. This feature is designed to give you the ability to define workflows that must be run in your organization or enterprise. For example, you could define a workflow to scan for secrets, licenses, and more. You'll be able to define a workflow at the organization or at the enterprise level. You can choose to run the workflow in all repositories or a subset of repositories.
 
 
 
