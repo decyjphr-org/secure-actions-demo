@@ -49,6 +49,63 @@ This is acheived using a custom GitHub App. The key things to keep in mind are
 2. [API to cancel a workflow run](https://octokit.github.io/rest.js/v18#actions-cancel-workflow-run)
 3. [API to disable a workflow](https://docs.github.com/en/rest/reference/actions#disable-a-workflow)
 
+Example Probot App to cancel a workflow run and disable a workflow:
+
+```Javascript
+/**
+ * This is the main entrypoint to your Probot app
+ * @param {import('probot').Application} app
+ */
+
+module.exports = app => {
+  // Your code here
+  app.log('Yay, the app was loaded!')
+
+  app.on(['workflow_run.requested'], async context => {
+    //app.log(`Workflow Run was requested! for  ${JSON.stringify(context.payload)}`)
+    let result=Math.random();
+    if (result<9) {
+      app.log(` deleting since result is ${result}`)
+      cancelWorkflow(context);
+      disableWorkflow(context)
+    } else {
+      app.log(`Not deleting since result is ${result}`)
+    }
+    return true;
+  })
+
+  async function cancelWorkflow(context) {
+    try {
+      await context.octokit.rest.actions.cancelWorkflowRun({
+        owner: context.payload.repository.owner.login,
+        repo: context.payload.repository.name,
+        run_id: context.payload.workflow_run.id,
+      });     
+    } catch (error) {
+      app.log(error)
+    }
+  }
+
+  async function disableWorkflow(context) {
+    try {
+      await context.octokit.rest.actions.disableWorkflow({
+        owner: context.payload.repository.owner.login,
+        repo: context.payload.repository.name,
+        workflow_id: context.payload.workflow_run.workflow_id,
+      });     
+    } catch (error) {
+      app.log(error)
+    }
+  }
+
+  // For more information on building apps:
+  // https://probot.github.io/docs/
+
+  // To get your app running against GitHub, see:
+  // https://probot.github.io/docs/development/
+}
+```
+
 ## Organization or Enterprise level workflows
 
 This is a feature that is in the roadmap but is targeted for a not-yet-defined future date. This would enable you to define a workflow that is run against multiple repositories in an Org or enterprise. This feature is designed to give you the ability to define workflows that must be run in your organization or enterprise. For example, you could define a workflow to scan for secrets, licenses, and more. You'll be able to define a workflow at the organization or at the enterprise level. You can choose to run the workflow in all repositories or a subset of repositories.
