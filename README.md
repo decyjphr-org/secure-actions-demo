@@ -56,4 +56,4 @@ For `Workflow` events, you can use the `phrase`  with the `action` parameter to 
 
 This is documented [here](https://docs.github.com/en/actions/learn-github-actions/sharing-workflows-with-your-organization#using-a-workflow-template-from-your-organization)
 
-:Warning: We don't recommend this because this requires public visibility for your `.github` repository.
+:warning: We don't recommend this because this requires public visibility for your `.github` repository.
