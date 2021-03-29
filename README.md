@@ -11,7 +11,7 @@ These are the topics that are covered in this repo:
   - [Setting Enviroment protection rules and required approvers](#setting-enviroment-protection-rules-and-required-approvers)
   - [Preventing unauthorized workflow runs](#preventing-unauthorized-workflow-runs)
   - [Organization or Enterprise level workflows](#organization-or-enterprise-level-workflows)
-  - [Svanboxel Organization Workflows](@svanboxel-organization-workflows)
+  - [Svanboxel Organization Workflows](#svanboxel-organization-workflows)
   - [Auditing Workflow Run Events](#auditing-workflow-run-events)
     - [Viewing Workflow events in the UI](#viewing-workflow-events-in-the-ui)
     - [Exporting the Audit Log](#exporting-the-audit-log)
