@@ -44,7 +44,10 @@ Once they approve, the workflow runs :tada: and the approval is audited:
 
 ## Preventing unauthorized workflow runs
 
-This is acheived using a custom GitHub App
+This is acheived using a custom GitHub App. The key things to keep in mind are 
+1. [Workflow run webhook](https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#workflow_run)
+2. [API to cancel a workflow run](https://octokit.github.io/rest.js/v18#actions-cancel-workflow-run)
+3. [API to disable a workflow](https://docs.github.com/en/rest/reference/actions#disable-a-workflow)
 
 ## Organization or Enterprise level workflows
 
