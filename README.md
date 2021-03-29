@@ -2,13 +2,14 @@
 
 ![CI](https://github.com/decyjphr-org/actions-demo/workflows/CI/badge.svg)
 
-
 Github Actions can provision infra, deploy apps, create releases, access secrets, etc. Since anyone with write access could create an Action Workflow in a repo, we want to demonstrate examples of how to harden and secure workflows. Most of the examples listed here are based on the documentation for [security-hardening-for-github-actions](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions) 
 
 These are the topics that are covered in this repo:
 
 - [Hardening of GitHub Actions Workflows](#hardening-of-github-actions-workflows)
   - [Protecting workflow runs and secrets using Environments](#protecting-workflow-runs-and-secrets-using-environments)
+  - [Setting Enviroment protection rules and required approvers](#setting-enviroment-protection-rules-and-required-approvers)
+  - [Preventing unauthorized workflow runs](#preventing-unauthorized-workflow-runs)
   - [Organization or Enterprise level workflows](#organization-or-enterprise-level-workflows)
   - [Auditing Workflow Run Events](#auditing-workflow-run-events)
     - [Viewing Workflow events in the UI](#viewing-workflow-events-in-the-ui)
@@ -16,10 +17,17 @@ These are the topics that are covered in this repo:
     - [Using Audit Log API](#using-audit-log-api)
   - [Using a workflow template from your organization](#using-a-workflow-template-from-your-organization)
 
-
 ## Protecting workflow runs and secrets using Environments
 
 This is docummented [here]()
+
+## Setting Enviroment protection rules and required approvers
+
+This is docummented [here](https://docs.github.com/en/actions/reference/environments)
+
+## Preventing unauthorized workflow runs
+
+This is acheived using a custom GitHub App
 
 ## Organization or Enterprise level workflows
 
