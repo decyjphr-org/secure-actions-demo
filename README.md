@@ -23,7 +23,7 @@ This is documented [here]()
 
 ## Setting Enviroment protection rules and required approvers
 
-This is docummented [here](https://docs.github.com/en/actions/reference/environments)
+This is documented [here](https://docs.github.com/en/actions/reference/environments)
 
 In this reference, we have a branch `add-colors` and there is a workflow that has 2 jobs:
 1. `build`
