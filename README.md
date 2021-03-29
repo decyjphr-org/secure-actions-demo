@@ -11,6 +11,7 @@ These are the topics that are covered in this repo:
   - [Setting Enviroment protection rules and required approvers](#setting-enviroment-protection-rules-and-required-approvers)
   - [Preventing unauthorized workflow runs](#preventing-unauthorized-workflow-runs)
   - [Organization or Enterprise level workflows](#organization-or-enterprise-level-workflows)
+  - [Svanboxel Organization Workflows](@svanboxel-organization-workflows)
   - [Auditing Workflow Run Events](#auditing-workflow-run-events)
     - [Viewing Workflow events in the UI](#viewing-workflow-events-in-the-ui)
     - [Exporting the Audit Log](#exporting-the-audit-log)
@@ -109,6 +110,11 @@ module.exports = app => {
 ## Organization or Enterprise level workflows
 
 This is a feature that is in the roadmap but is targeted for a not-yet-defined future date. This would enable you to define a workflow that is run against multiple repositories in an Org or enterprise. This feature is designed to give you the ability to define workflows that must be run in your organization or enterprise. For example, you could define a workflow to scan for secrets, licenses, and more. You'll be able to define a workflow at the organization or at the enterprise level. You can choose to run the workflow in all repositories or a subset of repositories.
+
+## Svanboxel Organization Workflows
+
+https://github.com/SvanBoxel/organization-workflows
+
 
 ## Auditing Workflow Run Events
 
