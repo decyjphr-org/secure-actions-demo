@@ -113,6 +113,9 @@ This is a feature that is in the roadmap but is targeted for a not-yet-defined f
 
 ## Svanboxel Organization Workflows
 
+This GitHub app allows you to run [GitHub Actions](https://github.com/features/actions) workflows across multiple repositories, which is [not yet natively supported](https://github.com/github/roadmap/issues/52). This app helps you - for example - to create a single workflow definition that is used for linting, compliance checks, and more.
+
+
 https://github.com/SvanBoxel/organization-workflows
 
 
