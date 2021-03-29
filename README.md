@@ -30,12 +30,15 @@ In this reference, we have a branch `add-colors` and there is a workflow that ha
 2. `deploy-staging`
 
 `deploy-staging` requires `approval` before deploying to `stage`
+
 ![image](https://user-images.githubusercontent.com/57544838/112863729-24f4b880-9085-11eb-9c4a-8cce3f073985.png)
 
 The required reviewer is notified when their approval is needed:
+
 ![image](https://user-images.githubusercontent.com/57544838/112863824-405fc380-9085-11eb-811b-5eb1ca07f14a.png)
 
-Once it is approved, the approval is auditable:
+Once they approve, the workflow runs :tada: and the approval is audited:
+
 ![image](https://user-images.githubusercontent.com/57544838/112864654-04792e00-9086-11eb-97a0-f350356235f4.png)
 
 
