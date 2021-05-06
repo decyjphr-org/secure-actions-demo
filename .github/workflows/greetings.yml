@@ -1,8 +1,7 @@
 name: Greetings
 
 on: 
-  schedule:
-  - cron: "*/5 * * * *"
+  issues
 
 jobs:
   greeting:
